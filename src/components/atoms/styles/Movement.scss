@@ -1,0 +1,46 @@
+@import "../../settings/variables";
+
+.list-item {
+  list-style-type: none;
+  padding: 10px 10px 10px 25px;
+  border: 1px solid $gray;
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:before {
+    content: '';
+    background-color: $gray;
+    display: block;
+    height: calc(100% + 2px);
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 15px;
+  }
+
+  &_head {
+    flex-basis: 100%;
+    line-height: 15px;
+    margin: 0;
+  }
+
+  &_content {
+    font-weight: 700;
+    line-height: 15px;
+    margin: 10px 0 0;
+  }
+
+  &--debit:before {
+    background-color: $green;
+  }
+
+  &--credit:before {
+    background-color: $blue;
+  }
+
+  &--pending:before {
+    background-color: $gray-secondary;
+  }
+}
