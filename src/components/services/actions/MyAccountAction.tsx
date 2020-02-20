@@ -9,21 +9,25 @@ function requestMyAccount() {
 function receiveMyAccount(response:Array<any>) {
     return {
         type: RECEIVE_MY_ACCOUNT,
-        account: response
+        accounts: response
     };
 }
 
 function fetchMyAccount() {
     return (dispatch:any) => {
-        return fetch('http://www.mocky.io/v2/5e4dc1562f0000670016a24d')
-            .then(response => response.json())
-            .then(response => dispatch(receiveMyAccount(response)))
+        return fetch('http://www.mocky.io/v2/5e4eefc03000007a00226721')
+            .then(response => {
+                return response.json();
+            })
+            .then(response => {
+                return dispatch(receiveMyAccount(response));
+            })
             .catch(error => { console.error(error) });
     }
 }
 
 function shouldFetchMyAccount (state:any) {
-    return !state.account.accounts && !state.isLoading;
+    return !Object.keys(state.accounts).length && state.isLoading;
 }
 
 export function fetchMyAccountIfNeeded() {

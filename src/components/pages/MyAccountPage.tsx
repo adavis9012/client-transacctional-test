@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchMyAccountIfNeeded } from '../services/actions/MyAccountAction';
-import Account from '../organisms/Accounts';
+import Accounts from "../organisms/Accounts";
 
 export const MyAccountPage = (props:any) => {
-    const { account, error, isLoading, fetchMyAccountIfNeeded } = props;
+    const { accounts, error, isLoading, fetchMyAccountIfNeeded } = props;
 
     fetchMyAccountIfNeeded();
 
     return (
-        <section className="my-accounts-page">{JSON.stringify(account)}
+        <section className="my-accounts-page">
+            {JSON.stringify(accounts)}
+            {(!isLoading && !error) && <Accounts accounts={accounts}/>}
         </section>
     )
 };
 
 const mapSateToProps = (state:any) => ({
-    account: state.account,
+    accounts: state.accounts,
     error: state.error,
     isLoading: state.isLoading
 });

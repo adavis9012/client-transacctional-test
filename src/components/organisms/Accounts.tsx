@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Accounts: FunctionComponent<Props> = (props) => {
-	const accountList = props.accounts.map((data: AccountData) => {
+	const accountList =  props.accounts.map((data: AccountData) => {
 		return <Account key={`account-${data.accountID}`} data={data}/>;
 	});
 

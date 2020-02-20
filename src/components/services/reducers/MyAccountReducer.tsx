@@ -1,9 +1,9 @@
 import {GET_MY_ACCOUNT, RECEIVE_MY_ACCOUNT} from '../constants/ActionTypes';
 
 const initialState = {
-    account: {},
+    accounts: {},
     error: false,
-    isLoading: false
+    isLoading: true
 };
 
 function rootReducer(state: any = initialState, action:any) {
@@ -14,7 +14,7 @@ function rootReducer(state: any = initialState, action:any) {
             });
         case RECEIVE_MY_ACCOUNT:
             return Object.assign({}, state, {
-                account: action.account,
+                accounts: action.accounts,
                 isLoading: false
             });
         default:

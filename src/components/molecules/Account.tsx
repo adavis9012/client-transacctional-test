@@ -2,7 +2,7 @@ import React, {FunctionComponent} from 'react';
 import {Currency} from "../hoc";
 import './styles/Account.scss'
 import Button from "../atoms/Button";
-import {useHistory} from "react-router";
+import {useHistory} from "react-router-dom";
 
 export interface AccountData {
 	accountID?: number,
