@@ -3,8 +3,9 @@ import {Currency} from "../hoc/";
 import classNames from 'classnames';
 import './styles/Movement.scss';
 
-interface Props {
-	amount: number,
+export interface MovementProps {
+	description: string,
+	transactionAmount: number,
 	key: string,
 	type: string
 }
@@ -16,16 +17,16 @@ export const ItemType: {[key: string]: string} = {
 	undefined: 'undefined'
 };
 
-const Movement: FunctionComponent<Props> = props => {
+const Movement: FunctionComponent<MovementProps> = props => {
 	const classItem = classNames('list-item',
 		isValidType(props.type) && `list-item--${props.type}`
 	);
 
 	return (<li className={classItem}>
-		<p className="list-item_head">{props.children}</p>
+		<p className="list-item_head">{props.description}</p>
 		<p className="list-item_content">
 			<Currency type="COP">
-				{props.amount}
+				{props.transactionAmount}
 			</Currency>
 		</p>
 	</li>);

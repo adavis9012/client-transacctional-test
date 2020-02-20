@@ -5,9 +5,15 @@
   border: 1px solid $gray;
   padding: 15px;
   max-width: 350px;
-  margin: auto;
+  width: 100%;
+  margin: 10px;
+
+  &_button {
+    margin: auto;
+  }
 
   @include desktop {
     margin: 10px;
+    width: 250px;
   }
 }

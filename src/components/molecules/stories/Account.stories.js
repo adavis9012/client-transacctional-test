@@ -1,10 +1,7 @@
 import React from "react";
+import {MemoryRouter} from "react-router";
+import {storiesOf} from "@storybook/react";
 import Account from "../Account";
-
-export default  {
-    title: 'Molecules/Account',
-    component: Account
-};
 
 const mockData = {
     accountID: 1021,
@@ -13,4 +10,9 @@ const mockData = {
     availableValue: 999999
 };
 
-export const _default = () => <Account data={mockData} />;
+storiesOf('Molecules/Account', module)
+    .addDecorator(story => (
+        <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
+    ))
+    .add('Default', () => <Account data={mockData} />);
+
