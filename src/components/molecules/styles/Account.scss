@@ -1,0 +1,13 @@
+@import "../../settings/variables";
+@import "../../settings/mixins";
+
+.account {
+  border: 1px solid $gray;
+  padding: 15px;
+  max-width: 350px;
+  margin: auto;
+
+  @include desktop {
+    margin: 10px;
+  }
+}

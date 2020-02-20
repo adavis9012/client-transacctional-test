@@ -30,7 +30,7 @@ const Movement: FunctionComponent<Props> = props => {
 		</p>
 	</li>);
 
-	function isValidType(type) {
+	function isValidType(type:string) {
 		return (typeof type !== 'undefined' && type !== 'undefined');
 	}
 };
