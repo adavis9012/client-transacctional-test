@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './components/settings/_variables.scss';
 import './components/settings/_base.scss';
@@ -12,7 +13,9 @@ const store = configureStore();
 function App() {
   return (
     <Provider store={store}>
-      <MyAccountPage />
+    	<Router>
+    		<Route path="" component={MyAccountPage} />
+    	</Router>
     </Provider>
   );
 }

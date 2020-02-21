@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 
 import { fetchMyAccountIfNeeded } from '../services/actions/MyAccountAction';
 import Accounts from "../organisms/Accounts";
+import Header from "../organisms/Header";
+import './styles/MyAccountPage.scss';
+
 
 export const MyAccountPage = (props:any) => {
     const { accounts, error, isLoading, fetchMyAccountIfNeeded } = props;
@@ -11,8 +14,10 @@ export const MyAccountPage = (props:any) => {
 
     return (
         <section className="my-accounts-page">
-            {JSON.stringify(accounts)}
-            {(!isLoading && !error) && <Accounts accounts={accounts}/>}
+            <Header />
+            <section className="account-wrapper">
+                {(!isLoading && !error) && <Accounts accounts={accounts}/>}
+            </section>
         </section>
     )
 };

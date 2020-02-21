@@ -2,14 +2,60 @@
 @import "../../settings/mixins";
 
 .account {
+  background-color: $white;
+  border-radius: 10px;
   border: 1px solid $gray;
-  padding: 15px;
-  max-width: 350px;
-  width: 100%;
   margin: 10px;
+  max-width: 350px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  min-height: 200px;
+
+  &_description {
+    padding: 0 15px
+  }
 
   &_button {
     margin: auto;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &_state {
+    &.active {
+
+      &:before {
+        background-color: $ligth-blue;
+        border-radius: 50%;
+        content: "";
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+    .unactive {
+      &:before {
+        content: "";
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+    .disbaled {
+      &:before {
+        background-color: $red-solid;
+        content: "";
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
   }
 
   @include desktop {
