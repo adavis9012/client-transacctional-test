@@ -1,4 +1,4 @@
-import {GET_MY_ACCOUNT, RECEIVE_MY_ACCOUNT} from '../constants/ActionTypes';
+import {GET_MOVEMENTS, RECEIVE_MOVEMENTS} from '../constants/ActionTypes';
 
 const initialState = {
     data: {},
@@ -6,15 +6,15 @@ const initialState = {
     isLoading: true
 };
 
-function MyAccountReducer(state: any = initialState, action:any) {
+function MovementsReducer(state: any = initialState, action:any) {
     switch (action.type) {
-        case GET_MY_ACCOUNT:
+        case GET_MOVEMENTS:
             return Object.assign({}, state, {
                 isLoading: true
             });
-        case RECEIVE_MY_ACCOUNT:
+        case RECEIVE_MOVEMENTS:
             return Object.assign({}, state, {
-                data: action.accounts,
+                data: action.movements,
                 isLoading: false
             });
         default:
@@ -22,4 +22,4 @@ function MyAccountReducer(state: any = initialState, action:any) {
     }
 }
 
-export default MyAccountReducer;
+export default MovementsReducer;

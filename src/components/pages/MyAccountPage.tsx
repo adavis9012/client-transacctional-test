@@ -8,7 +8,8 @@ import './styles/MyAccountPage.scss';
 
 
 export const MyAccountPage = (props:any) => {
-    const { accounts, error, isLoading, fetchMyAccountIfNeeded } = props;
+    const { fetchMyAccountIfNeeded } = props;
+    const { data, error, isLoading } = props.accounts;
 
     fetchMyAccountIfNeeded();
 
@@ -16,10 +17,10 @@ export const MyAccountPage = (props:any) => {
         <section className="my-accounts-page">
             <Header />
             <section className="account-wrapper">
-                {(!isLoading && !error) && <Accounts accounts={accounts}/>}
+                {(!isLoading && !error) && <Accounts accounts={data}/>}
             </section>
         </section>
-    )
+    );
 };
 
 const mapSateToProps = (state:any) => ({

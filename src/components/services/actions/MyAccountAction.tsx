@@ -27,7 +27,7 @@ function fetchMyAccount() {
 }
 
 function shouldFetchMyAccount (state:any) {
-    return !Object.keys(state.accounts).length && state.isLoading;
+    return !Object.keys(state.accounts.data).length && state.accounts.isLoading;
 }
 
 export function fetchMyAccountIfNeeded() {
