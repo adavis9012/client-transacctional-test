@@ -1,10 +1,4 @@
-import {GET_MY_ACCOUNT, RECEIVE_MY_ACCOUNT} from '../constants/ActionTypes';
-
-function requestMyAccount() {
-    return {
-        type: GET_MY_ACCOUNT
-    };
-}
+import { RECEIVE_MY_ACCOUNT } from '../constants/ActionTypes';
 
 function receiveMyAccount(response:Array<any>) {
     return {

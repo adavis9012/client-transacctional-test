@@ -32,15 +32,11 @@
     margin: 10px 0 0;
   }
 
-  &--debit:before {
+  &--income:before {
     background-color: $green;
   }
 
-  &--credit:before {
+  &--outcome:before {
     background-color: $blue;
-  }
-
-  &--pending:before {
-    background-color: $gray-secondary;
   }
 }

@@ -8,7 +8,6 @@ export default  {
 
 export const _default = () => <ul>
     <Movement description="Default" />
-    <Movement type={ItemType.debit} transactionAmount={9999} description="Store A (Debit)" />
-    <Movement type={ItemType.credit} transactionAmount={-9999} description="Store A (Debit)" />
-    <Movement type={ItemType.pending} transactionAmount={9999} description="Store A (Debit)" />
+    <Movement type={ItemType.income} transactionAmount={9999} description="Store A" />
+    <Movement type={ItemType.outcome} transactionAmount={-9999} description="Store B" />
 </ul>

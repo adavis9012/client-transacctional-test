@@ -9,18 +9,23 @@
   cursor: pointer;
   display: block;
   font-family: $font-stack;
-  font-weight: 500;
   padding: 10px;
-  transition: background-color 0.3s ease;
   width: 100%;
-  font-weight: bold;
-  border-radius: 0 0 10px 10px;
+  max-width: 350px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+
+  @include desktop {
+    max-width: 250px;
+  }
+
+  &_bottom-form {
+    max-width: none;
+    border-radius: 0 0 10px 10px;
+  }
 
   &:hover {
     background-color: $primary-action;
-  }
-
-  @include desktop {
   }
 }
 

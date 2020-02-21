@@ -11,9 +11,8 @@ export interface MovementProps {
 }
 
 export const ItemType: {[key: string]: string} = {
-	credit: 'credit',
-	debit: 'debit',
-	pending: 'pending',
+	income: 'income',
+	outcome: 'outcome',
 	undefined: 'undefined'
 };
 

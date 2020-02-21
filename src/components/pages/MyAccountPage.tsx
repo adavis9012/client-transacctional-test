@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-
 import { fetchMyAccountIfNeeded } from '../services/actions/MyAccountAction';
 import Accounts from "../organisms/Accounts";
-import Header from "../organisms/Header";
+
 import './styles/MyAccountPage.scss';
 
 
@@ -15,7 +14,7 @@ export const MyAccountPage = (props:any) => {
 
     return (
         <section className="my-accounts-page">
-            <Header />
+            <h1>Mi Cuenta</h1>
             <section className="account-wrapper">
                 {(!isLoading && !error) && <Accounts accounts={data}/>}
             </section>

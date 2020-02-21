@@ -8,7 +8,7 @@ const movements = [
         accountID: 1022,
         accountType: 'Cuenta de Ahorros',
         transactionAmount: 1230000,
-        type: 'debit',
+        type: 'income',
         description: 'Airbnb transaction'
     },
     {
@@ -16,7 +16,7 @@ const movements = [
         accountID: 1022,
         accountType: 'Cuenta de Ahorros',
         transactionAmount: 4560000,
-        type: 'debit',
+        type: 'income',
         description: 'Rental Car transaction'
     },
     {
@@ -24,7 +24,7 @@ const movements = [
         accountID: 1023,
         accountType: 'Visa Gold',
         transactionAmount: 45600,
-        type: 'credit',
+        type: 'outcome',
         description: 'Google Market'
     },
     {
@@ -32,7 +32,7 @@ const movements = [
         accountID: 1022,
         accountType: 'Cuenta de Ahorros',
         transactionAmount: 723600,
-        type: 'debit',
+        type: 'income',
         description: 'Cloths and more Stuffs'
     },
     {
@@ -40,7 +40,7 @@ const movements = [
         accountID: 1023,
         accountType: 'Visa Gold',
         transactionAmount: 15600,
-        type: 'credit',
+        type: 'outcome',
         description: 'Meals and Beverages'
     }
 ];

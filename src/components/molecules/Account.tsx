@@ -30,7 +30,7 @@ const Account: FunctionComponent<Props> = (props) => {
 			Su saldo: <Currency type="COP">{value}</Currency>
 		</p>
 		<p className={`account_state ${data.state}`}>{data.state === 'active' ? 'Activo' : 'No Activo'}</p>
-		<Button className="account_button" onClick={handleDetailsClick}>Ver Detalles</Button>
+		<Button type="bottom-form" className="account_button" onClick={handleDetailsClick}>Ver Detalles</Button>
 	</div>);
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchMovementsIfNeeded } from '../services/actions/MovementsAction';
@@ -10,12 +10,15 @@ export const MovementsPage = (props:any) => {
     const {data, error, isLoading} = props.movements;
     const { id } = useParams();
 
-    fetchMovementsIfNeeded();
+    const filteredData = Object.keys(data).length && data.filter((el: any) => {
+        return el.accountID?.toString() === id;
+    });
 
+    fetchMovementsIfNeeded();
 
     return (
         <section className="movements-page">
-            {(!isLoading && !error) && <Movements title={`Movimientos del producto ${id}`} movements={data}/>}
+            {(!isLoading && !error) && <Movements title={`Movimientos del producto ${id}`} movements={filteredData}/>}
         </section>
     )
 };

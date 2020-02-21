@@ -1,10 +1,4 @@
-import {GET_MOVEMENTS, RECEIVE_MOVEMENTS} from '../constants/ActionTypes';
-
-function requestMovements() {
-    return {
-        type: GET_MOVEMENTS
-    };
-}
+import { RECEIVE_MOVEMENTS} from '../constants/ActionTypes';
 
 function receiveMovements(response:Array<any>) {
     return {
@@ -15,7 +9,7 @@ function receiveMovements(response:Array<any>) {
 
 function fetchMovements() {
     return (dispatch:any) => {
-        return fetch('http://www.mocky.io/v2/5e4dc4fe2f0000490016a25b')
+        return fetch('http://www.mocky.io/v2/5e4f56b83000005100226845')
             .then(response => {
                 return response.json();
             })
