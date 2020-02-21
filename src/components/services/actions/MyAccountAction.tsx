@@ -9,7 +9,7 @@ function receiveMyAccount(response:Array<any>) {
 
 function fetchMyAccount() {
     return (dispatch:any) => {
-        return fetch('http://www.mocky.io/v2/5e4eefc03000007a00226721')
+        return fetch('https://damp-scrubland-20365.herokuapp.com/http://www.mocky.io/v2/5e4eefc03000007a00226721')
             .then(response => {
                 return response.json();
             })

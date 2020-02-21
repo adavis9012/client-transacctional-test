@@ -9,7 +9,7 @@ function receiveMovements(response:Array<any>) {
 
 function fetchMovements() {
     return (dispatch:any) => {
-        return fetch('http://www.mocky.io/v2/5e4f56b83000005100226845')
+        return fetch('https://damp-scrubland-20365.herokuapp.com/http://www.mocky.io/v2/5e4f56b83000005100226845')
             .then(response => {
                 return response.json();
             })
