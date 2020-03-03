@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import configureStore from './components/services/store/DefaultStore';
+import configureStore from './services/store/DefaultStore';
 import MyAccountPage from './components/pages/MyAccountPage';
 import MovementsPage from "./components/pages/MovementsPage";
 import Header from "./components/organisms/Header";

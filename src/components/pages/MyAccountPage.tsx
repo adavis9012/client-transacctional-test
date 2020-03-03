@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchMyAccountIfNeeded } from '../services/actions/MyAccountAction';
+import { fetchMyAccountIfNeeded } from '../../services/actions/MyAccountAction';
 import Accounts from "../organisms/Accounts";
 
 import './styles/MyAccountPage.scss';

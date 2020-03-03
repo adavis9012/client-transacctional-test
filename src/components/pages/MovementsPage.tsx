@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchMovementsIfNeeded } from '../services/actions/MovementsAction';
+import { fetchMovementsIfNeeded } from '../../services/actions/MovementsAction';
 import Movements from "../molecules/Movements";
 import {useParams} from "react-router";
 
