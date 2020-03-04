@@ -1,7 +1,4 @@
-import MovementsReducer from "./MovementsReducer";
-import MyAccountReducer from "./MyAccountReducer";
+import MovementsReducer from './movementsReducer.tsx';
+import MyAccountReducer from './myAccountReducer.tsx';
 
-export {
-    MovementsReducer,
-    MyAccountReducer
-};
+export { MovementsReducer, MyAccountReducer };

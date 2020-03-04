@@ -1,30 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { useParams } from 'react-router';
 import { fetchMovementsIfNeeded } from '../../services/actions/MovementsAction';
-import Movements from "../molecules/Movements";
-import {useParams} from "react-router";
+import Movements from '../molecules/Movements';
 
-export const MovementsPage = (props:any) => {
-    const { fetchMovementsIfNeeded } = props;
-    const {data, error, isLoading} = props.movements;
-    const { id } = useParams();
+export const MovementsPage = (props: any) => {
+  const { fetchMovementsIfNeeded } = props;
+  const { data, error, isLoading } = props.movements;
+  const { id } = useParams();
 
-    const filteredData = Object.keys(data).length && data.filter((el: any) => {
-        return el.accountID?.toString() === id;
+  const filteredData =
+    Object.keys(data).length &&
+    data.filter((el: any) => {
+      return el.accountID?.toString() === id;
     });
 
-    fetchMovementsIfNeeded();
+  fetchMovementsIfNeeded();
 
-    return (
-        <section className="movements-page">
-            {(!isLoading && !error) && <Movements title={`Movimientos del producto ${id}`} movements={filteredData}/>}
-        </section>
-    )
+  return (
+    <section className="movements-page">
+      {!isLoading && !error && (
+        <Movements
+          title={`Movimientos del producto ${id}`}
+          movements={filteredData}
+        />
+      )}
+    </section>
+  );
 };
 
-const mapStateToProps = (state:any) => ({
-    movements: state.movements
+const mapStateToProps = (state: any) => ({
+  movements: state.movements
 });
 
 const mapDispatchToProps = { fetchMovementsIfNeeded };

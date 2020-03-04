@@ -1,5 +1,5 @@
-@import "./src/components/settings/variables";
-@import "./src/components/settings/mixins";
+@import "settings/variables";
+@import "settings/mixins";
 
 .app {
   background: $gray-silver;

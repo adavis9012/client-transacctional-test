@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import rootReducer from '../reducers/MovementsReducer';
+import rootReducer from '../reducers/movementsReducer';
 
 const loggerMiddleware = createLogger();
 

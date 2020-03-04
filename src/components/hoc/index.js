@@ -1,5 +1,3 @@
-import Currency from './Currency';
+import Currency from './Currency.tsx';
 
-export {
-    Currency
-};
+export { Currency };
